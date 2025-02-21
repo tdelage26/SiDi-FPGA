@@ -23,12 +23,12 @@ For purchase here -> https://manuferhi.com/
 | Commodore PET2001    |X|X|
 | Commodore VIC20      |X|X|
 | Camputers Lynx       |X| |
-| Color Computer 2     | |X|
+| Color Computer 2     |X|X|
 | Color Computer 3     |X| |
 | Elan Enterprise      |X|X|
-| Exidy Sorcerer       | |X|
+| Exidy Sorcerer       |X|X|
 | Laser 500            |X| |
-| Luxor ABC80          | |X|
+| Luxor ABC80          |X|X|
 | OneChipMSX           |X|X|
 | MSX Favio B.         |X|X|
 | Mattel Aquarius      |X| |
@@ -55,7 +55,7 @@ For purchase here -> https://manuferhi.com/
 | Gameboy             |X|X|
 | Gameboy Advance     | |X|
 | Genesis / Megadrive |X|X|
-| Intellivision       | |X|
+| Intellivision       |X|X|
 | NeoGeo              |X|X|
 | NES                 |X|X|
 | PC Engine SuperGrafx |X|X|
