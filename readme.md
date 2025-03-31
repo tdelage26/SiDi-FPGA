@@ -63,7 +63,7 @@ For purchase here -> https://manuferhi.com/
 | Sega Master System  |X|X|
 | SNES                |X|X|
 | Videopac            |X|X|
-| Vectrex             |X| |
+| Vectrex             |X|X|
 
 
 
