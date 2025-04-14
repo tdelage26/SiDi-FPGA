@@ -25,6 +25,7 @@ For purchase here -> https://manuferhi.com/
 | Camputers Lynx       |X| |
 | Color Computer 2     |X|X|
 | Color Computer 3     |X| |
+| EG2000               |X| |
 | Elan Enterprise      |X|X|
 | Exidy Sorcerer       |X|X|
 | Laser 500            |X| |
@@ -34,6 +35,7 @@ For purchase here -> https://manuferhi.com/
 | Mattel Aquarius      |X| |
 | Next186 PC           |X|X|
 | Oric Atmos           |X|X|
+| RC2014               |X| |
 | MAC Plus Too         |X|X|
 | Sinclair QL          |X|X|
 | Sam Coupe            |X|X|
