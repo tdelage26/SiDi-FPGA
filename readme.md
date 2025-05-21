@@ -38,6 +38,7 @@ For purchase here -> https://manuferhi.com/
 | RC2014               |X| |
 | MAC Plus Too         |X|X|
 | Sinclair QL          |X|X|
+| SVI328               |X| |
 | Sam Coupe            |X|X|
 | TI99/4A              |X|X|
 | Videoton             |X|X|
