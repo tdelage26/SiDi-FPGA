@@ -11,7 +11,7 @@ Place the rom in a svi328.rom file in the SVI328 folder
 
 1) Load the cartridge in the OSD
 
-* note - you will need to reboot to get out of the cartridge until this is fixed
+* note - To get out of the cartridge select "Hard Reset" in the OSD menu
 
 ### Cassettes - either with a file, or through ADC input
 
