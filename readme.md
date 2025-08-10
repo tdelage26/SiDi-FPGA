@@ -57,6 +57,7 @@ For purchase here -> https://manuferhi.com/
 | Colecovision        |X|X|
 | Gameboy             |X|X|
 | Gameboy Advance     | |X|
+| Sega Game Gear      |X|X|
 | Genesis / Megadrive |X|X|
 | Intellivision       |X|X|
 | NeoGeo              |X|X|
