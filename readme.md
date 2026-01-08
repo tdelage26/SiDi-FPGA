@@ -17,7 +17,7 @@ For purchase here -> https://manuferhi.com/
 | AtariST / Mistery    |X|X|
 | BBC Micro            |X|X|
 | BK0011M              |X|X|
-| Coleco Adam          | |X|
+| Coleco Adam          |X|X|
 | Commodore 16         |X|X|
 | Commodore 64         |X|X|
 | Commodore PET2001    |X|X|
