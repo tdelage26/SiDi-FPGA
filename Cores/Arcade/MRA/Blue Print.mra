@@ -1,0 +1,96 @@
+<misterromdescription>
+    <name>Blue Print</name>
+    <region>World</region>
+    <homebrew>no</homebrew>
+    <bootleg>no</bootleg>
+    <platform>Arcade</platform>
+    <category>Maze</category>
+    <year>1982</year>
+    <manufacturer>Zilec Electronics / Bally Midway</manufacturer>
+    <series></series>
+    <version>1.0</version>
+    <alternative></alternative>
+
+    <setname>blueprnt</setname>
+    <mameversion>0220</mameversion>
+    <rbf>BluePrint</rbf>
+
+    <about author="tdelage" webpage="" twitter="" source="https://github.com/"/>
+
+    <resolution>15kHz</resolution>
+    <rotation>vertical (ccw)</rotation>
+    <flip>no</flip>
+
+    <players>2 (alternating)</players>
+    <joystick>4-way</joystick>
+    <num_buttons>1</num_buttons>
+    <buttons default="B,Start,Select" names="Jump/Action,-,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+
+    <!--
+        DIP Switch layout (active LOW on real hardware, OSD presents active HIGH):
+        Byte 0 (SW1):
+          bits 3:0  - unused
+          bits 5:4  - Bonus Life
+          bits 7:6  - Lives
+        Byte 1 (SW2):
+          bits 1:0  - Coinage
+          bit  2    - Demo Sounds
+          bit  3    - Cabinet
+          bits 5:4  - Difficulty
+          bits 7:6  - unused
+    -->
+    <switches default="00,00" page_id="1" page_name="Switches">
+        <!-- DIP Switch 1 (SW1) -->
+        <dip bits="4,5"   name="Bonus Life"   ids="20K then 100K+,40K then 200K+,80K then 400K+,120K then 600K+"/>
+        <dip bits="6,7"   name="Lives"        ids="3,4,5,2"/>
+        <!-- DIP Switch 2 (SW2) -->
+        <dip bits="8,9"   name="Coinage"      ids="1 Coin 1 Credit,2 Coins 1 Credit,1 Coin 2 Credits,1 Coin 3 Credits"/>
+        <dip bits="10"    name="Demo Sounds"  ids="On,Off"/>
+        <dip bits="11"    name="Cabinet"      ids="Upright,Cocktail"/>
+        <dip bits="12,13" name="Difficulty"   ids="Level 1,Level 2,Level 3,Level 4"/>
+    </switches>
+
+    <!--
+        Single ROM image for MiST (all ROMs concatenated as one ioctl_index=0 stream).
+        Layout (49152 bytes total):
+          0x0000-0x0FFF  bp-1.1m   Main CPU ROM 1
+          0x1000-0x1FFF  bp-2.1n   Main CPU ROM 2
+          0x2000-0x2FFF  bp-3.1p   Main CPU ROM 3
+          0x3000-0x3FFF  bp-4.1r   Main CPU ROM 4
+          0x4000-0x4FFF  bp-5.1s   Main CPU ROM 5
+          0x5000-0x5FFF  bg-1.3c   Tile ROM 0
+          0x6000-0x6FFF  bg-2.3d   Tile ROM 1
+          0x7000-0x7FFF  red.17d   Sprite ROM (red plane)
+          0x8000-0x8FFF  blue.18d  Sprite ROM (blue plane)
+          0x9000-0x9FFF  green.20d Sprite ROM (green plane)
+          0xA000-0xAFFF  snd-1.3u  Sound Z80 ROM 1
+          0xB000-0xBFFF  snd-2.3v  Sound Z80 ROM 2
+    -->
+    <rom index="0" md5="40a25481584adf2148cc5a3cb874dcfe" zip="blueprnt.zip" address="0x0000">
+        <!-- Main CPU ROMs (5x 4KB = 20KB) -->
+        <part crc="b20069a6" name="bp-1.1m"/>
+        <part crc="4a30302e" name="bp-2.1n"/>
+        <part crc="6866ca07" name="bp-3.1p"/>
+        <part crc="5d3cfac3" name="bp-4.1r"/>
+        <part crc="a556cac4" name="bp-5.1s"/>
+        <!-- Tile ROMs (2x 4KB = 8KB) -->
+        <part crc="ac2a61bc" name="bg-1.3c"/>
+        <part crc="81fe85d7" name="bg-2.3d"/>
+        <!-- Sprite ROMs (3x 4KB = 12KB, bitplanes R/B/G) -->
+        <part crc="a73b6483" name="red.17d"/>
+        <part crc="7d622550" name="blue.18d"/>
+        <part crc="09c7a518" name="green.20d"/>
+        <!-- Sound CPU ROMs (2x 4KB = 8KB) -->
+        <part crc="fd38777a" name="snd-1.3u"/>
+        <part crc="33d5bf5b" name="snd-2.3v"/>
+    </rom>
+
+    <mratimestamp>20260221000000</mratimestamp>
+    <remark>
+        MiST port by gehstock & tdelage (2026).
+        Based on the original Zilec Electronics hardware (Konami 005885 + 005849 chipset).
+        Two AY-3-8910 sound chips: AY1 at 1.152 MHz (music), AY2 at 0.576 MHz (SFX).
+        Note: sound ROMs (snd-1.3u, snd-2.3v) are appended after the graphics ROMs
+        in a single ROM image, unlike the MiSTer version which uses a separate index.
+    </remark>
+</misterromdescription>
