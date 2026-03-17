@@ -1,0 +1,55 @@
+<misterromdescription>
+    <name>Saturn (Zilec)</name>
+    <region>World</region>
+    <homebrew>no</homebrew>
+    <bootleg>no</bootleg>
+    <platform>Arcade</platform>
+    <series></series>
+    <year>1983</year>
+    <manufacturer>Zilec Electronics / Jaleco</manufacturer>
+    <category>Maze</category>
+    <setname>saturnzi</setname>
+    <mameversion>0220</mameversion>
+    <rbf>BluePrint</rbf>
+
+    <about></about>
+    <resolution>15kHz</resolution>
+    <rotation>vertical (ccw)</rotation>
+    <flip>no</flip>
+    <players>2 (alternating)</players>
+    <joystick>4-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,Start,Select" names="Fire,Double Fire,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+
+    <switches base="8" default="04,00" page_id="1" page_name="Switches" mod="1">
+        <!-- DILSW1 bits -> MRA bit = 8+N; DILSW2 bits -> MRA bit = N -->
+        <dip bits="9"     name="Cabinet"      ids="Upright,Cocktail"/>
+        <dip bits="14,15" name="Lives"        ids="3,4,5,6"/>
+        <dip bits="1"     name="Coinage"      ids="A 1/1 B 1/6,A 2/1 B 1/3"/>
+        <dip bits="2"     name="Demo Sounds"  ids="Off,On"/>
+    </switches>
+
+    <rom index="0" md5="none" zip="saturnzi.zip" address="0x0000">
+        <!-- Main CPU ROMs (6x 4KB = 24KB) -->
+        <part crc="18a6d68e" name="r1"/>
+        <part crc="a7dd2665" name="r2"/>
+        <part crc="b9cfa791" name="r3"/>
+        <part crc="c5a997e7" name="r4"/>
+        <part crc="43444d00" name="r5"/>
+        <part crc="4d4821f6" name="r6"/>
+        <!-- Tile ROMs (2x 4KB = 8KB) -->
+        <part crc="35987d61" name="r10"/>
+        <part crc="ca6a7fda" name="r9"/>
+        <!-- Sprite ROMs (3x 4KB = 12KB, R/B/G bitplanes) -->
+        <part crc="6e4e6e5d" name="r11"/>
+        <part crc="46fc049e" name="r12"/>
+        <part crc="8b3e8c32" name="r13"/>
+        <!-- Sound CPU ROMs (2x 4KB = 8KB) -->
+        <part crc="dd43e02f" name="r7"/>
+        <part crc="7f9d0877" name="r8"/>
+    </rom>
+
+    <mratimestamp>20260221000000</mratimestamp>
+    <rom index="1"><part>01</part></rom>
+
+</misterromdescription>
