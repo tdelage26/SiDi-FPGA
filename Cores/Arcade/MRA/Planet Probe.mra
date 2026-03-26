@@ -1,0 +1,81 @@
+<misterromdescription>
+    <name>Planet Probe</name>
+    <region>World</region>
+    <homebrew>no</homebrew>
+    <bootleg>no</bootleg>
+    <platform>Arcade</platform>
+    <category>Shooter</category>
+    <year>1985</year>
+    <manufacturer>Crux / Kyugo</manufacturer>
+    <series></series>
+    <version>1.0</version>
+    <alternative></alternative>
+
+    <setname>pprobe</setname>
+    <mameversion>0220</mameversion>
+    <rbf>Vastar</rbf>
+
+    <about author="tdelage" webpage="" twitter="" source="https://github.com/"/>
+
+    <resolution>15kHz</resolution>
+    <rotation>vertical (ccw)</rotation>
+    <flip>no</flip>
+
+    <players>2 (alternating)</players>
+    <joystick>4-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,Start,Select" names="Fire Up,Fire Front,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+
+    <!-- mod="1" -> core_mod[0]=1 -> rot_flip=1 -> CCW rotation (Planet Probe) -->
+    <switches base="8" default="FF,FF" page_id="1" page_name="Switches" mod="1">
+        <dip bits="0,3"   name="Credits A"  ids="Free Play,1c/1cr,1c/2cr,1c/3cr,1c/4cr,1c/5cr,1c/6cr,1c/7cr,2c/1cr,2c/3cr,2c/5cr,3c/1cr,3c/2cr,3c/4cr,4c/1cr,4c/3cr"/>
+        <dip bits="4,7"   name="Credits B"  ids="Free Play,1c/1cr,1c/2cr,1c/3cr,1c/4cr,1c/5cr,1c/6cr,1c/7cr,2c/1cr,2c/3cr,2c/5cr,3c/1cr,3c/2cr,3c/4cr,4c/1cr,4c/3cr"/>
+        <dip bits="8,9"   name="Lives"      ids="6,5,4,3"/>
+        <dip bits="10,11" name="Bonus Life" ids="20k/60k,40k/120k,20k/every 60k,40k/every 120k"/>
+        <dip bits="12"    name="Unknown"    ids="Off,On"/>
+        <dip bits="13,14" name="Difficulty" ids="Hardest,Hard,Normal,Easy"/>
+        <dip bits="15"    name="Cabinet"    ids="Upright,Cocktail"/>
+    </switches>
+
+    <!-- ROM layout (selector module byte addresses):
+         0x00000-0x07FFF  main_rom  32KB  (4 x 8KB: pb2-pb5)
+         0x08000-0x09FFF  sub_rom    8KB  (pb1)
+         0x0A000-0x0BFFF  fgtile     8KB  (pb9)
+         0x0C000-0x0DFFF  sprite0    8KB  (pb8)
+         0x0E000-0x0FFFF  sprite1    8KB  (pb10)
+         0x10000-0x11FFF  bgtile0    8KB  (pb6)
+         0x12000-0x13FFF  bgtile1    8KB  (pb7)
+         0x14000-0x140FF  prom_r    256B
+         0x14100-0x141FF  prom_g    256B
+         0x14200-0x142FF  prom_b    256B
+         0x14300-0x143FF  prom_unk  256B
+         Total: 0x14400 = 82944 bytes -->
+    <rom index="0" md5="none" zip="pprobe.zip" address="0x0000">
+        <!-- Main CPU ROMs: 4 x 8KB = 32KB -->
+        <part crc="a88592aa" name="pb2.bin"/>
+        <part crc="e4e20f74" name="pb3.bin"/>
+        <part crc="4e40e3fe" name="pb4.bin"/>
+        <part crc="b26ff0fd" name="pb5.bin"/>
+        <!-- Sub CPU ROM: 8KB -->
+        <part crc="cd624df9" name="pb1.bin"/>
+        <!-- FG tiles: 8KB -->
+        <part crc="82294dd6" name="pb9.bin"/>
+        <!-- Sprites: 2 x 8KB -->
+        <part crc="8d809e45" name="pb8.bin"/>
+        <part crc="895f9dd3" name="pb10.bin"/>
+        <!-- BG tiles: 2 x 8KB -->
+        <part crc="ff309239" name="pb6.bin"/>
+        <part crc="439978f7" name="pb7.bin"/>
+        <!-- Color PROMs: 4 x 256B -->
+        <part crc="dfb6b97c" name="n82s129.3"/>
+        <part crc="3cc696a2" name="n82s129.1"/>
+        <part crc="64fea033" name="dm74s287.2"/>
+        <part crc="b5297a3b" name="mmi6301-1.bin"/>
+    </rom>
+
+    <!-- Index 1: mod byte — 0x01 = Planet Probe (rot_flip=1, CCW rotation) -->
+    <rom index="1"><part>01</part></rom>
+
+    <mratimestamp>20260320000000</mratimestamp>
+
+</misterromdescription>

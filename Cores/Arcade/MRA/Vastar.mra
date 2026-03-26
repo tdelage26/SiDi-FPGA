@@ -1,0 +1,74 @@
+<misterromdescription>
+    <name>Vastar</name>
+    <region>World</region>
+    <homebrew>no</homebrew>
+    <bootleg>no</bootleg>
+    <platform>Arcade</platform>
+    <category>Shooter</category>
+    <year>1983</year>
+    <manufacturer>Orca (Sesame Japan license)</manufacturer>
+    <series></series>
+    <version>1.0</version>
+    <alternative></alternative>
+
+    <setname>vastar</setname>
+    <mameversion>0220</mameversion>
+    <rbf>Vastar</rbf>
+
+    <about author="tdelage" webpage="" twitter="" source="https://github.com/"/>
+
+    <resolution>15kHz</resolution>
+    <rotation>vertical (cw)</rotation>
+    <flip>no</flip>
+
+    <players>2 (alternating)</players>
+    <joystick>4-way</joystick>
+    <num_buttons>2</num_buttons>
+    <buttons default="B,A,Start,Select" names="Fire,Shield,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+
+    <switches base="8" default="FF,FF" page_id="1" page_name="Switches" mod="0">
+        <!-- DSW1: Coinage (AY port A) -->
+        <dip bits="0,3"   name="Credits A"  ids="Free Play,1c/1cr,1c/2cr,1c/3cr,1c/4cr,1c/5cr,1c/6cr,1c/7cr,2c/1cr,2c/3cr,2c/5cr,3c/1cr,3c/2cr,3c/4cr,4c/1cr,4c/3cr"/>
+        <dip bits="4,7"   name="Credits B"  ids="Free Play,1c/1cr,1c/2cr,1c/3cr,1c/4cr,1c/5cr,1c/6cr,1c/7cr,2c/1cr,2c/3cr,2c/5cr,3c/1cr,3c/2cr,3c/4cr,4c/1cr,4c/3cr"/>
+        <!-- DSW2: Game options (AY port B) -->
+        <dip bits="8,9"   name="Lives"      ids="6,5,4,3"/>
+        <dip bits="10,11" name="Bonus Life" ids="20k/60k,40k/120k,20k/every 60k,40k/every 120k"/>
+        <dip bits="12"    name="Unknown"    ids="Off,On"/>
+        <dip bits="13,14" name="Difficulty" ids="Hardest,Hard,Normal,Easy"/>
+        <dip bits="15"    name="Cabinet"    ids="Upright,Cocktail"/>
+    </switches>
+
+    <rom index="0" md5="none" zip="vastar.zip" address="0x0000">
+        <!-- Main CPU ROMs: 8 x 4KB = 32KB -->
+        <part crc="45fa5075" name="e_f4.rom"/>
+        <part crc="84531982" name="e_k4.rom"/>
+        <part crc="94a4f778" name="e_h4.rom"/>
+        <part crc="40e4d57b" name="e_l4.rom"/>
+        <part crc="bd607651" name="e_j4.rom"/>
+        <part crc="7a3779a4" name="e_n4.rom"/>
+        <part crc="31b6be39" name="e_n7.rom"/>
+        <part crc="f63f0e78" name="e_n5.rom"/>
+        <!-- Sub CPU ROMs: 2 x 4KB = 8KB -->
+        <part crc="713478d8" name="e_f2.rom"/>
+        <part crc="e4535442" name="e_j2.rom"/>
+        <!-- FG tiles: 8KB -->
+        <part crc="34f067b6" name="c_c9.rom"/>
+        <!-- Sprites: 2 x 8KB -->
+        <part crc="edbf3b13" name="c_f7.rom"/>
+        <part crc="8f309e22" name="c_f9.rom"/>
+        <!-- BG tiles: 2 x 8KB -->
+        <part crc="b5f9c866" name="c_n4.rom"/>
+        <part crc="c9fbbfc9" name="c_s4.rom"/>
+        <!-- Color PROMs: 4 x 256B -->
+        <part crc="a712d73a" name="tbp24s10.6p"/>
+        <part crc="0a7d48ec" name="tbp24s10.6s"/>
+        <part crc="4c3db907" name="tbp24s10.6m"/>
+        <part crc="b5297a3b" name="tbp24s10.8n"/>
+    </rom>
+
+    <!-- Index 1: mod byte — 0x00 = Vastar (rot_flip=0, CW rotation) -->
+    <rom index="1"><part>00</part></rom>
+
+    <mratimestamp>20260320000000</mratimestamp>
+
+</misterromdescription>
