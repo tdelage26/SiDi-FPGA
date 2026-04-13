@@ -1,0 +1,44 @@
+<misterromdescription>
+	<name>Cavelon</name>
+	<platform>Scramble</platform>
+	<year>1981</year>
+	<manufacturer>Jetsoft</manufacturer>
+	<category>Maze - Horizontal</category>
+	<setname>cavelon</setname>
+	<rbf>Scramble</rbf>
+
+	<rom index="1">
+		<part>13</part>
+	</rom>
+
+	<rom index="0" md5="none" zip="cavelon.zip">
+		<!-- Bank 0 lower: 2.bin -->
+		<part crc="a3b353ac" name="2.bin"></part>
+		<!-- Bank 0 upper: 1.bin -->
+		<part crc="3f62efd6" name="1.bin"></part>
+		<!-- Bank 1 lower: 3.bin  *** correct order: 2,1,3,1 matching MiSTer MRA *** -->
+		<part crc="39d74e4e" name="3.bin"></part>
+		<!-- Bank 1 upper: 1.bin repeated -->
+		<part crc="3f62efd6" name="1.bin"></part>
+		<!-- Sound ROM x4 (2KB each) -->
+		<part crc="f58dcf55" name="1c_snd.bin"></part>
+		<part crc="f58dcf55" name="1c_snd.bin"></part>
+		<part crc="f58dcf55" name="1c_snd.bin"></part>
+		<part crc="f58dcf55" name="1c_snd.bin"></part>
+		<!-- GFX ROM 0: k.bin x2 (4KB each) -->
+		<part crc="59bc7f9e" name="k.bin" repeat="2"></part>
+		<!-- GFX ROM 1: h.bin x2 (4KB each) -->
+		<part crc="d44fcd6f" name="h.bin" repeat="2"></part>
+		<!-- Palette PROM: 32 bytes -->
+		<part crc="d133356b" name="cavelon.clr"></part>
+	</rom>
+
+	<switches default="FF,FC,F1">
+		<dip bits="17,18" ids="5,3,4,2" name="Lives"></dip>
+		<dip bits="9"     ids="1c/1cr,2c/1cr" name="Coinage"></dip>
+		<dip bits="8"     ids="Cocktail,Upright" name="Cabinet"></dip>
+	</switches>
+
+	<buttons default="B,A,Start,Select" names="Shoot,Bomb,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+
+</misterromdescription>
