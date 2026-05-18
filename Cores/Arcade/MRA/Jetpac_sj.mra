@@ -1,0 +1,45 @@
+<misterromdescription>
+	<n>Jetpac (Taito SJ)</n>
+	<mameversion>0245</mameversion>
+	<setname>jetpac_sj</setname>
+	<mratimestamp>202605061200</mratimestamp>
+	<year>2026</year>
+	<manufacturer>Anton Gale (homebrew port — original by Ultimate Play The Game, 1983)</manufacturer>
+	<category>Platform / Shooter</category>
+	<rbf>TaitoSJ</rbf>
+	<rotation>horizontal</rotation>
+	<joystick>2-way</joystick>
+	<buttons default="A,B,Start,Select" names="Fire,Thrust,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+	<switches default="00,FB,00,FF,00,00,00,00">
+		<dip bits="8" name="DSA:0" ids="On, Off"/>
+		<dip bits="9" name="DSA:1" ids="On, Off"/>
+		<dip bits="10" name="DSA:2" ids="On, Off"/>
+		<dip bits="11" name="DSA:3" ids="On, Off"/>
+		<dip bits="12" name="DSA:4" ids="On, Off"/>
+		<dip bits="13" name="DSA:5" ids="On, Off"/>
+		<dip bits="14" name="DSA:6" ids="On, Off"/>
+		<dip bits="15" name="DSA:7" ids="On, Off"/>
+	</switches>
+	<rom index="0" md5="none" zip="jetpac_sj.zip" type="merged|nonmerged">
+		<!-- Main CPU - Pass 1 (base + bank 0) [0x8000/0x8000] -->
+		<part name="jetpac_sj.rom"/>
+		<!-- Main CPU - Pass 2 (duplicate) [0x8000/0x8000] -->
+		<part name="jetpac_sj.rom"/>
+		<!-- GFX ROMs [0x4000/0x8000] -->
+		<part crc="4b1d9455" name="rh24.001"/>
+		<part crc="bf71e278" name="rh25.002"/>
+		<part crc="13da2a9b" name="rh26.003"/>
+		<part crc="425b52b0" name="rh27.004"/>
+		<!-- Padding GFX: 0x4000 -->
+		<part repeat="0x4000"> 00 </part>
+		<!-- Audio CPU ROMs [0x1000/0x4000] -->
+		<part name="jetpac_sj_sound.rom"/>
+		<!-- Layer PROM [0x100/0x800] -->
+		<part crc="b833b5ea" name="eb16.22"/>
+		<!-- Padding PROM: 0x700 -->
+		<part repeat="0x700"> 00 </part>
+	</rom>
+	<rom index="1">
+		<part>3</part>
+	</rom>
+</misterromdescription>
