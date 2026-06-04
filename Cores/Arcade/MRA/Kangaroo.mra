@@ -1,0 +1,43 @@
+<misterromdescription>
+    <name>Kangaroo</name>
+    <setname>kangaroo</setname>
+    <rbf>Kangaroo</rbf>
+    <mameversion>0270</mameversion>
+    <year>1982</year>
+    <manufacturer>Sun Electronics / Atari</manufacturer>
+    <category>Platform</category>
+    <players>2 (alternating)</players>
+    <joystick>4-way</joystick>
+    <rotation>vertical (cw)</rotation>
+    <num_buttons>1</num_buttons>
+    <button_names>Punch</button_names>
+
+    <switches base="8" default="00" page_id="1" page_name="Switches" mod="0">
+        <dip bits="0"   name="Lives"
+            ids="3,5"/>
+        <dip bits="1"   name="Difficulty"
+            ids="Easy,Hard"/>
+        <dip bits="2,3" name="Bonus Life"
+            ids="None,10K,10K+30K,20K+40K"/>
+        <dip bits="4,7" name="Coinage"
+            ids="A 1C/1C B 1C/1C,A 2C/1C B 2C/1C"/>
+    </switches>
+
+    <rom index="0" zip="kangaroo.zip" md5="None">
+        <!-- CPU ROMs: 0x00000-0x05FFF -->
+        <part crc="0d18c581" name="tvg_75.0"/>
+        <part crc="5978d37a" name="tvg_76.1"/>
+        <part crc="522d1097" name="tvg_77.2"/>
+        <part crc="063da970" name="tvg_78.3"/>
+        <part crc="9e5cf8ca" name="tvg_79.4"/>
+        <part crc="2fc18049" name="tvg_80.5"/>
+        <!-- Sound ROM: 0x06000-0x06FFF -->
+        <part crc="fb449bfd" name="tvg_81.8"/>
+        <!-- Blitter GFX ROMs: 0x07000-0x0AFFF -->
+        <part crc="c0446ca6" name="tvg_83.v0"/>
+        <part crc="72c52695" name="tvg_85.v2"/>
+        <part crc="e4cb26c2" name="tvg_84.v1"/>
+        <part crc="9e6a599f" name="tvg_86.v3"/>
+    </rom>
+
+</misterromdescription>
