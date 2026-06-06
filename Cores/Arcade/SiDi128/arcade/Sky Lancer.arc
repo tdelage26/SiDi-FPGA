@@ -1,0 +1,5 @@
+[ARC]
+RBF=SKYLANCER
+NAME=SKYLANCER
+MOD=0
+BUTTONS="Fire,-,-,-,-,-,Start,Coin,P2 Start,-"
