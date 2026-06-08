@@ -1,0 +1,5 @@
+[ARC]
+RBF=AVALANCHE
+NAME=AVALANCHE
+MOD=0
+BUTTONS="-,-,-,-,-,-,Start,Coin,P2 Start,-"
