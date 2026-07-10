@@ -1,0 +1,60 @@
+<misterromdescription>
+	<name>Jr. Pac-Man</name>
+	<region>World</region>
+	<homebrew>no</homebrew>
+	<bootleg>no</bootleg>
+	<version></version>
+	<alternative></alternative>
+	<platform></platform>
+	<series>Pac-Man</series>
+	<year>1983</year>
+	<manufacturer>Bally Midway</manufacturer>
+	<category>Maze</category>
+
+	<setname>jrpacman</setname>
+	<mameversion>0220</mameversion>
+	<rbf>jrpacman</rbf>
+	<about></about>
+
+	<resolution>15kHz</resolution>
+	<rotation>vertical (cw)</rotation>
+	<flip>no</flip>
+
+	<players>2 (alternating)</players>
+	<joystick>4-way</joystick>
+	<special_controls></special_controls>
+	<num_buttons>0</num_buttons>
+	<buttons default="Start,Select" names="-,-,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+
+	<switches default="FF,FF,FF,C9">
+		<dip bits="24,25" ids="Free Play,1C/1C,1C/2C,2C/1C" name="Coinage"></dip>
+		<dip bits="26,27" ids="1,2,3,5" name="Lives"></dip>
+		<dip bits="28,29" ids="10000,15000,20000,30000" name="Bonus Life"></dip>
+		<dip bits="30" ids="Hard,Normal" name="Difficulty"></dip>
+	</switches>
+
+	<rom index="1">
+		<part>12</part>
+	</rom>
+
+	<rom index="0" md5="none" zip="jrpacman.zip">
+		<!-- Program ROMs 40KB: 8d=0x0000-0x1FFF, 8e=0x2000-0x3FFF, 8h/8j/8k remapped to 0x8000-0xDFFF (downloaded at 0x4000-0x9FFF) -->
+		<part crc="e3fa972e" name="jrp8d.8d"></part>
+		<part crc="ec889e94" name="jrp8e.8e"></part>
+		<part crc="35f1fc6e" name="jrp8h.8h"></part>
+		<part crc="9737099e" name="jrp8j.8j"></part>
+		<part crc="5252dd97" name="jrp8k.8k"></part>
+		<!-- GFX tiles 8KB (A000-BFFF) then sprites 8KB (C000-DFFF) -->
+		<part crc="0527ff9b" name="jrp2c.2c"></part>
+		<part crc="73477193" name="jrp2e.2e"></part>
+		<!-- Palette lo (9e) at E000, palette hi (9f) at E100 -->
+		<part crc="029d35c4" name="a290-27axv-bxhd.9e"></part>
+		<part crc="eee34a79" name="a290-27axv-cxhd.9f"></part>
+		<!-- Colour lookup table (9p) at E200 -->
+		<part crc="9f6ea9d8" name="a290-27axv-axhd.9p"></part>
+		<!-- Namco WSG waveform PROM (7p) at E300 -->
+		<part crc="a9cc86bf" name="a290-27axv-dxhd.7p"></part>
+	</rom>
+
+	<nvram index="2" size="2048"></nvram>
+</misterromdescription>
