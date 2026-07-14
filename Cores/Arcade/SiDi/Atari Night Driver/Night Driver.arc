@@ -1,0 +1,5 @@
+[ARC]
+RBF=NIGHTDRIVER
+NAME=NIGHTDRIVER
+MOD=0
+BUTTONS="Fire,-,-,-,-,-,Start,Coin,P2 Start,-"
