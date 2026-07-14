@@ -1,0 +1,65 @@
+<misterromdescription>
+  <name>Trio The Punch - Never Forget Me... (World)</name>
+  <setname>triothep</setname>
+  <mameversion>0264</mameversion>
+  <rbf>Triothep</rbf>
+  <year>1989</year>
+  <manufacturer>Data East Corporation</manufacturer>
+  <category>Action</category>
+  <rotation>horizontal</rotation>
+  <resolution>15kHz</resolution>
+  <players>2</players>
+  <joystick>8-way</joystick>
+  <num_buttons>2</num_buttons>
+  <buttons default="A,B,Start" names="Attack,Jump,-,-,-,-,Start,Coin,Pause"/>
+
+  <switches base="8" default="FF,FF">
+    <dip bits="0,1" ids="3C/1C,2C/1C,1C/2C,1C/1C" name="Coin A"/>
+    <dip bits="2,3" ids="3C/1C,2C/1C,1C/2C,1C/1C" name="Coin B"/>
+    <dip bits="6"   ids="On,Off"           name="Flip Screen"/>
+    <dip bits="7"   ids="Upright,Cocktail" name="Cabinet"/>
+  </switches>
+
+  <rom index="1">
+    <part>01</part>
+  </rom>
+
+  <rom index="0" zip="triothep.zip" md5="None">
+
+    <part name="fg-16.bin"/>   <!-- 128K @ 0x00000 -->
+    <part name="fg-15.bin"/>   <!--  64K @ 0x20000 -->
+    <part name="fg-14.bin"/>   <!--  64K @ 0x30000 -->
+
+    <part name="fg-18.bin"/>
+
+    <interleave output="32">
+      <part name="fg-12.bin" offset="0x00000" length="0x8000" map="0001"/>  <!-- region 0/4 -->
+      <part name="fg-13.bin" offset="0x00000" length="0x8000" map="0010"/>  <!-- region 2/4 -->
+      <part name="fg-12.bin" offset="0x08000" length="0x8000" map="0100"/>  <!-- region 1/4 -->
+      <part name="fg-13.bin" offset="0x08000" length="0x8000" map="1000"/>  <!-- region 3/4 -->
+    </interleave>
+
+    <interleave output="32">                                  <!-- block 1: 64K evens -->
+      <part name="fg-03.bin" map="0001"/>  <!-- region 2/4 -> B0 -->
+      <part name="fg-01.bin" map="0010"/>  <!-- region 3/4 -> B1 -->
+      <part name="fg-11.bin" map="0100"/>  <!-- region 0   -> B2 -->
+      <part name="fg-09.bin" map="1000"/>  <!-- region 1/4 -> B3 -->
+    </interleave>
+    <interleave output="32">                                  <!-- block 2: 32K odds -->
+      <part name="fg-02.bin" map="0001"/>  <!-- region 2/4 -> B0 -->
+      <part name="fg-00.bin" map="0010"/>  <!-- region 3/4 -> B1 -->
+      <part name="fg-10.bin" map="0100"/>  <!-- region 0   -> B2 -->
+      <part name="fg-08.bin" map="1000"/>  <!-- region 1/4 -> B3 -->
+    </interleave>
+
+    <interleave output="32">
+      <part name="fg-05.bin" map="0001"/>  <!-- region 2/4 -> B0 -->
+      <part name="fg-07.bin" map="0010"/>  <!-- region 3/4 -> B1 -->
+      <part name="fg-04.bin" map="0100"/>  <!-- region 0   -> B2 -->
+      <part name="fg-06.bin" map="1000"/>  <!-- region 1/4 -> B3 -->
+    </interleave>
+
+    <part name="fg-17.bin"/>
+  </rom>
+  <rom index="2"></rom>
+</misterromdescription>
