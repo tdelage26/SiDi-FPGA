@@ -1,0 +1,49 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Balloon Brothers</name>
+    <setname>ballbros</setname>
+    <mameversion>0282</mameversion>
+    <year>1992</year>
+    <manufacturer>East Technology</manufacturer>
+    <players>2</players>
+    <rbf>superman</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="ballbros.zip|cchip.zip" md5="None">
+        <part>
+            04 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+        </part>
+        <interleave output="16">
+            <part name="5a" crc="0b983a69" map="01"/>
+            <part name="10a" crc="4af0e858" map="10"/>
+        </interleave>
+        <part repeat="0x50000"> FF</part>
+        <part name="8d" crc="d1c515af"/>
+        <part name="east-10" crc="ca0ac419"/>
+        <part repeat="0xE0000"> FF</part>
+        <interleave output="32">
+            <part name="1" crc="8196d624" map="0001"/>
+            <part name="3" crc="ec3e0537" map="0010"/>
+            <part name="0" crc="1cc584e5" map="0100"/>
+            <part name="2" crc="bb441717" map="1000"/>
+        </interleave>
+        <part repeat="0x180000"> FF</part>
+        <part name="east-11" crc="92111f96"/>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="df,9e">
+        <DSWA/>
+        <dip name="Coin A" bits="0,1" ids="2/3,2/1,1/2,1/1"/>
+        <dip name="Coin B" bits="2,3" ids="2/3,2/1,1/2,1/1"/>
+        <dip name="Difficulty" bits="5,6" ids="Hardest,Hard,Medium,Easy"/>
+        <dip name="Debug Mode" bits="7" ids="On,Off"/>
+        <DSWB/>
+        <dip name="Demo Sounds" bits="8" ids="On,Off"/>
+        <dip name="Flip Screen" bits="9" ids="On,Off"/>
+        <dip name="Allow Continue" bits="10" ids="No,Yes"/>
+        <dip name="Language" bits="13" ids="English,Japanese"/>
+        <dip name="Color Change" bits="14" ids="Less,More"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+    </switches>
+    <buttons names="Action,-,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="1"/>
+</misterromdescription>
