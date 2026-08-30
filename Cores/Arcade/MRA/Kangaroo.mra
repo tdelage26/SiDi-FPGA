@@ -10,7 +10,7 @@
     <joystick>4-way</joystick>
     <rotation>vertical (cw)</rotation>
     <num_buttons>1</num_buttons>
-    <button_names>Punch</button_names>
+    <buttons default="A,Start,Select" names="Punch,-,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
 
     <switches base="8" default="00" page_id="1" page_name="Switches" mod="0">
         <dip bits="0"   name="Lives"
@@ -38,6 +38,10 @@
         <part crc="72c52695" name="tvg_85.v2"/>
         <part crc="e4cb26c2" name="tvg_84.v1"/>
         <part crc="9e6a599f" name="tvg_86.v3"/>
+        <!-- MB8841 MCU program ROM: 0x0B000-0x0B7FF -->
+        <part crc="04ca58ee" name="mb8841_477m.ic29"/>
+        <!-- Protection data PROM: 0x0B800-0x0BFFF (present in kangaroo.zip) -->
+        <part crc="57766f69" name="tvg_82.12"/>
     </rom>
 
 </misterromdescription>
