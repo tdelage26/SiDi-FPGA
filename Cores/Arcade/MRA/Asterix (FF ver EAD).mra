@@ -1,0 +1,55 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Asterix (FF ver EAD)</name>
+    <setname>asterix</setname>
+    <mameversion>0282</mameversion>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <players>2</players>
+    <rbf>asterix</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="asterix.zip" type="merged" md5="None" address="0x30000000">
+        <part>
+            00 00 C0 00 D0 02 D0 03
+            FF FF 00 00 00 00 00 00
+        </part>
+        <interleave output="16">
+            <part name="068_ea_d02.8d" crc="53aac057" map="01"/>
+            <part name="068_ea_d01.8c" crc="61d6621d" map="10"/>
+        </interleave>
+        <part repeat="0x40000"> FF</part>
+        <interleave output="16">
+            <part name="068a04.7d" crc="9f351828" map="01"/>
+            <part name="068a03.7c" crc="8223ebdc" map="10"/>
+        </interleave>
+        <part name="068_a05.5f" crc="d3d0d77b"/>
+        <part name="068a06.1e" crc="6df9ec0e"/>
+        <interleave output="32">
+            <part name="068a12.16k" crc="b9da8e9c" map="0021"/>
+            <part name="068a11.12k" crc="7eb07a81" map="2100"/>
+        </interleave>
+        <interleave output="32">
+            <part name="068a08.7k" crc="c41278fe" map="0021"/>
+            <part name="068a07.3k" crc="32efdbc4" map="2100"/>
+        </interleave>
+    </rom>
+    <rom index="2">
+        <part>
+00 28 FF D7 90 68 65 61 63 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 02 04 00 01 01 00 01 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="128"/>
+    <!--  8-pxl black frame on sides. -->
+    <rom index="1">
+        <part>20 80</part>
+    </rom>
+    <buttons names="Punch,Jump,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>
