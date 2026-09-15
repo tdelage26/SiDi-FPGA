@@ -1,0 +1,60 @@
+<misterromdescription>
+    <rotation>vertical (ccw)</rotation>
+    <name>Meta Fox</name>
+    <setname>metafox</setname>
+    <mameversion>0282</mameversion>
+    <year>1989</year>
+    <manufacturer>Jordan I.S. / Seta</manufacturer>
+    <players>2</players>
+    <rbf>arbalest</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="metafox.zip" md5="None">
+        <part>
+            00 00 00 00 00 00 00 00
+            00 00 00 00 00 00 00 00
+        </part>
+        <interleave output="16">
+            <part name="p1004162" crc="b6356c9a" map="01"/>
+            <part name="p1003161" crc="4fd6e6a1" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="up001001" crc="0db7a505" map="01"/>
+            <part name="up001002" crc="ce91c987" map="10"/>
+        </interleave>
+        <part name="up001005" crc="2ac5e3e3"/>
+        <part repeat="0x3E000"> FF</part>
+        <part name="up001015" crc="2e20e39f"/>
+        <part name="up001014" crc="fca6315e"/>
+        <interleave output="16">
+            <part name="up001010" crc="bfbab472" map="01"/>
+            <part name="up001012" crc="fed2c5f9" map="10"/>
+        </interleave>
+        <interleave output="16">
+            <part name="up001011" crc="26cea381" map="01"/>
+            <part name="up001013" crc="adabf9ea" map="10"/>
+        </interleave>
+        <interleave output="32">
+            <part name="p1006163" crc="80f69c7c" map="0001"/>
+            <part name="p1007164" crc="d137e1a3" map="0010"/>
+            <part name="p1008165" crc="57494f2b" map="0100"/>
+            <part name="p1009166" crc="8344afd2" map="1000"/>
+        </interleave>
+    </rom>
+    <nvram index="2" size="22540"/>
+    <rom index="1">
+        <part>05 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,f1">
+        <DSW/>
+        <dip name="Flip Screen" bits="1" ids="On,Off"/>
+        <dip name="Service Mode" bits="2" ids="On,Off"/>
+        <dip name="Demo Sounds" bits="3" ids="Off,On"/>
+        <dip name="Coin A" bits="4,5" ids="4/1,3/1,2/1,1/1"/>
+        <dip name="Coin B" bits="6,7" ids="1/6,1/4,1/3,1/2"/>
+        <dip name="Difficulty" bits="8,9" ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Bonus Life" bits="10,11" ids="600k &amp; 900k,900K Only,600K Only,None"/>
+        <dip name="Lives" bits="12,13" ids="2,1,5,3"/>
+    </switches>
+    <buttons names="Shot,Bomb,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>
