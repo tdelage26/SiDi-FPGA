@@ -1,0 +1,58 @@
+<misterromdescription>
+    <rotation>vertical (cw)</rotation>
+    <name>Money Money (set 1)</name>
+    <setname>monymony</setname>
+    <mameversion>0282</mameversion>
+    <year>1983</year>
+    <manufacturer>Zaccaria</manufacturer>
+    <players>2</players>
+    <rbf>mnymny</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="monymony.zip" md5="None">
+        <part>
+            00 00 00 00 00 00 00 00
+        </part>
+        <part name="cpu1.1a" crc="13c227ca"/>
+        <part name="cpu2.1b" crc="87372545"/>
+        <part name="cpu3.1c" crc="6aea9c01"/>
+        <part name="cpu4.1d" crc="5fdec451"/>
+        <part name="cpu5.2a" crc="af830e3c"/>
+        <part name="cpu6.2c" crc="31da62b1"/>
+        <part name="snd13.2g" crc="78b01b98"/>
+        <part name="snd9.1i" crc="94e3858b"/>
+        <part name="snd8.1h" crc="aad76193"/>
+        <part name="snd7.1g" crc="1e8ffe3e"/>
+        <interleave output="32">
+            <part name="bg1.2d" crc="82ab4d1a" map="0001"/>
+            <part name="bg2.1f" crc="40d4e4d1" map="0010"/>
+            <part name="bg3.1e" crc="36980455" map="0100"/>
+            <part name="bg3.1e" crc="36980455" map="1000"/>
+        </interleave>
+        <part name="9g" crc="fc9a0f21"/>
+        <part name="9f" crc="93106704"/>
+    </rom>
+    <nvram index="2" size="2048"/>
+    <rom index="1">
+        <part>01 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="01,01,d6">
+        <DSW.0/>
+        <dip name="Lives" bits="0,1" ids="2,3,4,5"/>
+        <dip name="Infinite Lives (Cheat)" bits="2" ids="Off,On"/>
+        <dip name="Difficulty" bits="3" ids="Easy,Hard"/>
+        <dip name="Cabinet" bits="4" ids="Upright,Cocktail"/>
+        <dip name="Freeze" bits="5" ids="Off,On"/>
+        <dip name="Cross Hatch Pattern" bits="6" ids="Off,On"/>
+        <DSW.1/>
+        <dip name="Bonus Life" bits="8,9" ids="None,200k,300k,400k"/>
+        <dip name="Title" bits="10" ids="Todays,All time"/>
+        <dip name="Service Mode" bits="15" ids="Off,On"/>
+        <DSW.2/>
+        <dip name="Coin A" bits="16,17" ids="1/3,1/2,1/1,2/1"/>
+        <dip name="Coin B" bits="18,19" ids="1/6,1/5,1/4,1/3,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1/2,1/1,2/1,4/1"/>
+        <dip name="Coin C" bits="20,22" ids="1/7,1/5,1/4,1/3,1/2,1/1,2/1,4/1"/>
+        <dip name="QOL - flip" ids="Off,On" bits="24"/>
+    </switches>
+    <buttons names="Shoot,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="1"/>
+</misterromdescription>
