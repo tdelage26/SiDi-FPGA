@@ -1,0 +1,45 @@
+<misterromdescription>
+    <name>World Rally Championship (FF, Gaelco, 1993, checksum 3873)</name>
+    <setname>wrallyc</setname>
+    <rbf>wrally</rbf>
+    <mameversion>0288</mameversion>
+    <year>1993</year>
+    <manufacturer>Gaelco</manufacturer>
+    <players>2</players>
+    <rotation>horizontal</rotation>
+    <region>World</region>
+
+    <rom index="0" zip="wrally.zip" type="merged" md5="none">
+        <interleave output="16">
+            <part name="c22.bin" crc="56da43b6" map="01"/>
+            <part name="c23.bin" crc="8b7d93c3" map="10"/>
+        </interleave>
+
+        <interleave output="32">
+            <part name="worldr18.i07" crc="b37c807e" map="0001"/>
+            <part name="worldr19.i09" crc="018b35bb" map="0010"/>
+            <part name="worldr20.i11" crc="58b2809a" map="0100"/>
+            <part name="worldr21.i13" crc="b7fddb12" map="1000"/>
+        </interleave>
+
+        <part name="worldr14.c01" crc="e931c2ee"/>
+        <part name="worldr15.c03" crc="11f0fe2c"/>
+
+        <part name="wrdallas.bin" crc="547d1768"/>
+    </rom>
+
+    <switches default="df,ff" base="20">
+        <dip name="Difficulty"     bits="0,1"  ids="Hardest,Hard,Easy,Normal"/>
+        <dip name="Joysticks"      bits="2"    ids="1,2"/>
+        <dip name="Control"        bits="3,4"  ids="Invalid,Optical Wheel,Pot Wheel,Joystick"/>
+        <dip name="Demo Sounds"    bits="5"    ids="On,Off"/>
+        <dip name="Cabinet"        bits="6"    ids="Cocktail,Upright"/>
+        <dip name="Service Mode"   bits="7"    ids="On,Off"/>
+        <dip name="Coin A"         bits="8,9,10" ids="3C/4C,2C/3C,1C/6C,1C/5C,1C/4C,1C/3C,1C/2C,1C/1C"/>
+        <dip name="Coin B"         bits="11,12,13" ids="6C/1C,5C/1C,4C/1C,3C/1C,2C/1C,3C/2C,4C/3C,1C/1C"/>
+        <dip name="Credit Cfg"     bits="14"   ids="Start 2C/Cont 1C,Start 1C/Cont 1C"/>
+        <dip name="Free Play"      bits="15"   ids="On,Off"/>
+    </switches>
+
+    <buttons names="Accel,Gear,Start,Coin,Pause" default="A,B,Start,Select,Y" count="2"/>
+</misterromdescription>
