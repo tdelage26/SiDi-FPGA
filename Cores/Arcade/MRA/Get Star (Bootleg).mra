@@ -1,0 +1,63 @@
+<misterromdescription>
+	<name>Get Star (Bootleg)</name>
+	<mameversion>0245</mameversion>
+	<setname>getstarb1</setname>
+	<parent>grdian</parent>
+	<mratimestamp>202609200000</mratimestamp>
+	<year>1986</year>
+	<manufacturer>Toaplan</manufacturer>
+	<category>Shooter</category>
+	<rbf>SlapFight</rbf>
+	<rotation>horizontal</rotation>
+	<joystick>8-way</joystick>
+	<buttons default="A,B,Start,Select" names="Kick,Punch,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+	<switches default="FF,CF,FF">
+		<dip bits="14" name="Dip Switch Test" ids="ON,OFF"/>
+		<dip bits="13" name="Screen" ids="Normal Screen,Invert"/>
+		<dip bits="12" name="Cabinet" ids="Upright,Table"/>
+		<dip bits="11" name="Advertise Sound" ids="OFF,ON"/>
+		<dip bits="20" name="Extend" ids="50K 200K Every 150K,30K 130K Every 100K"/>
+		<dip bits="18,19" name="Difficulty" ids="Hardest,Hard,Medium,Easy"/>
+		<dip bits="16,17" name="Lives" ids="2,1,5,3"/>
+	</switches>
+	<rom index="0" md5="none" zip="grdian.zip|getstarb1.zip" type="merged|nonmerged">
+		<!-- main Z80: ep0 16K + ep0b 16K + ep1 32K -->
+		<part crc="9AFAD7E0" name="getstar_14_b.8p"/>
+		<part crc="5FEB0A60" name="getstar_13_b.8n"/>
+		<part crc="E3CFB1BA" name="getstar_12_b.8k"/>
+		<!-- audio Z80: ep2 -->
+		<part crc="18DAA44C" name="a68-03.12d"/>
+		<!-- FG chars: ep3 (6g), ep4 (6f), 8K pad -->
+		<part crc="6E5AC9D4" name="getstar_8_b.6g"/>
+		<part crc="E3D409E7" name="getstar_7_b.6f"/>
+		<part repeat="0x2000"> 00 </part>
+		<!-- BG tiles: ep5-ep8 -->
+		<part crc="05F9EB9A" name="a68_06.6p"/>
+		<part crc="CF1A964C" name="a68_07.6n"/>
+		<part crc="37662375" name="a68_08.6m"/>
+		<part crc="A293CC2E" name="a68_09.4m"/>
+		<!-- sprites: ep9-ep12 -->
+		<part crc="83161ED0" name="a68-10.6h"/>
+		<part crc="F24158CF" name="a68-11.8h"/>
+		<part crc="11F74E32" name="a68-12.6j"/>
+		<part crc="643FB282" name="a68-13.8j"/>
+		<!-- colour PROMs: cp1 (12q), cp2 (12n slot), cp3 (12m) -->
+		<part crc="D6360B4D" name="rom21.12q"/>
+		<part crc="513224F0" name="rom19.12p"/>
+		<part crc="4CA01887" name="rom20.12m"/>
+		<!-- getstarb1 protection patches -->
+		<patch offset="0x6d56">C3</patch>
+		<patch offset="0x6d28">00</patch>
+		<patch offset="0x6d29">00</patch>
+		<patch offset="0x6d30">00</patch>
+		<patch offset="0x6d31">00</patch>
+		<patch offset="0x6d38">00</patch>
+		<patch offset="0x6d39">00</patch>
+		<patch offset="0x6d48">00</patch>
+		<patch offset="0x6d49">00</patch>
+	</rom>
+	<!-- core variant: 0 = Slap Fight, 1 = Tiger Heli, 2 = Get Star -->
+	<rom index="1">
+		<part>2</part>
+	</rom>
+</misterromdescription>
