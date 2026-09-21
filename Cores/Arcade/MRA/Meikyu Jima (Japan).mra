@@ -1,0 +1,45 @@
+<misterromdescription>
+    <rotation>horizontal</rotation>
+    <name>Meikyu Jima (Japan)</name>
+    <setname>kikcubic</setname>
+    <mameversion>0282</mameversion>
+    <year>1988</year>
+    <manufacturer>Irem</manufacturer>
+    <players>2</players>
+    <rbf>meikyu</rbf>
+    <joystick>4</joystick>
+    <region>World</region>
+    <rom index="0" zip="kikcubic.zip" md5="None">
+        <part name="mqj-p0" crc="9cef394a"/>
+        <part name="mqj-b0" crc="d9bcf4cd"/>
+        <part name="mqj-b1" crc="54a0abe1"/>
+        <part name="mqj-sp" crc="bbcf3582"/>
+        <part name="mqj-v0" crc="54762956"/>
+        <interleave output="16">
+            <part name="mqj-c0" crc="975585c5" map="01"/>
+            <part name="mqj-c1" crc="49d9936d" map="10"/>
+        </interleave>
+        <part repeat="0x20000"> FF</part>
+        <interleave output="16">
+            <part name="mqj-00" crc="7fb0c58f" map="01"/>
+            <part name="mqj-10" crc="3a189205" map="10"/>
+        </interleave>
+    </rom>
+    <nvram index="2" size="6148"/>
+    <rom index="1">
+        <part>00 59</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,d5">
+        <DSW1/>
+        <dip name="Difficulty" bits="0,1" ids="Hardest,Hard,Easy,Medium"/>
+        <dip name="Lives" bits="2,3" ids="4,2,1,3"/>
+        <DSW2/>
+        <dip name="Flip Screen" bits="8" ids="On,Off"/>
+        <dip name="Cabinet" bits="9" ids="Upright,Cocktail"/>
+        <dip name="Demo Sounds" bits="11" ids="On,Off"/>
+        <dip name="Level Select" bits="13" ids="On,Off"/>
+        <dip name="Player Adding" bits="14" ids="On,Off"/>
+        <dip name="Service Mode" bits="15" ids="On,Off"/>
+    </switches>
+    <buttons names="Freeze,Pillar,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2"/>
+</misterromdescription>
