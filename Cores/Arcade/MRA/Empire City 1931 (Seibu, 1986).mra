@@ -1,0 +1,59 @@
+<misterromdescription>
+    <rbf>empirecity</rbf>
+    <name>Empire City: 1931 (Seibu, 1986)</name>
+    <setname>empcity</setname>
+    <year>1986</year>
+    <manufacturer>Seibu Kaihatsu</manufacturer>
+    <players>2</players>
+    <buttons>2</buttons>
+    <rotation>horizontal</rotation>
+
+    <rom index="0" zip="empcity.zip" md5="none">
+        <part repeat="16">00</part>
+        <part name="ec_01.rom" crc="fe01d9b1"/>
+        <part repeat="32768">00</part>
+        <part name="ec_02.rom" crc="b3cf1ef7"/>
+        <part repeat="98304">00</part>
+        <part name="ec_04.rom" crc="aa3e7d1e"/>
+        <part repeat="32768">00</part>
+        <part name="5j" crc="1b8d0c07"/>
+        <part repeat="8192">00</part>
+        <part name="9.7c"  crc="8ceaf4fe"/> <part name="10.8c" crc="5a1a227a"/>
+        <part name="15.7j" crc="27a310bc"/> <part name="16.8j" crc="3d19ce18"/>
+        <part name="5.2c"  crc="0c099a31"/> <part name="6.3c"  crc="3cc77c31"/>
+        <part name="7.4c"  crc="2c6caa5f"/> <part name="8.5c"  crc="e11ded31"/>
+        <part name="11.2j" crc="8261ecfe"/> <part name="12.3j" crc="71137301"/>
+        <part name="13.4c" crc="0ae48dd3"/> <part name="14.5j" crc="debf5d76"/>
+        <part name="18.6w" crc="68acd627"/> <part name="19.7w" crc="5170a057"/>
+        <part name="20.8w" crc="8299f247"/> <part name="21.9w" crc="b57dc037"/>
+        <part name="empcityu_68705.3j" crc="182f7616"/>
+        <part name="17.2n" crc="1b3706b5"/>
+        <part name="82s129.006" crc="f9424b5b"/>
+        <part name="82s129.002" crc="c883d49b"/>
+        <part name="82s129.003" crc="af81882a"/>
+        <part name="82s129.004" crc="1831ce7c"/>
+        <part name="82s129.005" crc="96cb6293"/>
+        <part name="82s129.052" crc="3d915ffc"/>
+        <part name="82s129.066" crc="51e8832f"/>
+    </rom>
+
+    <switches default="3f,4d" base="16">
+        <!-- ===== DSW0 (0xc203) = "DIP-SW 1" / Bank B ===== -->
+        <dip name="Coin A"          bits="0,2" ids="5C_1C,1C_5C,3C_1C,1C_2C,4C_1C,1C_3C,2C_1C,1C_1C"/>
+        <!-- 0x18 Coin_B: 0=2C_3C 1=1C_2C 2=2C_1C 3=1C_1C -->
+        <dip name="Coin B"          bits="3,4" ids="2C_3C,1C_2C,2C_1C,1C_1C"/>
+        <dip name="Service Mode"    bits="5"   ids="On,Off"/>          <!-- 0x20, PORT_SERVICE_DIPLOC SW1:6 -->
+        <dip name="Allow Continue"  bits="6"   ids="Yes,No"/>          <!-- 0x40: 0=Yes 1=No -->
+        <dip name="Bullet Colour"   bits="7"   ids="Red,Blue"/>        <!-- 0x80: 0=Red 1=Blue -->
+        <!-- ===== DSW1 (0xc204) = "DIP-SW 2" / Bank A ===== -->
+        <dip name="Cabinet"         bits="8"   ids="Cocktail,Upright"/><!-- 0x01: 0=Cocktail 1=Upright -->
+        <!-- 0x06 Difficulty: 0=Hardest 1=Hard 2=Normal 3=Easy -->
+        <dip name="Difficulty"      bits="9,10"  ids="Hardest,Hard,Normal,Easy"/>
+        <!-- 0x18 Lives: 0=4 1=3 2=2 3=1 -->
+        <dip name="Lives"           bits="11,12" ids="4,3,2,1"/>
+        <!-- 0x60 Bonus_Life: 0=40000 80000  1=30000 60000  2=20000 40000  3=10000 30000 -->
+        <dip name="Bonus Life"      bits="13,14" ids="40000 80000,30000 60000,20000 40000,10000 30000"/>
+        <dip name="Demo Sounds"     bits="15"  ids="On,Off"/>          <!-- 0x80: 0=On 1=Off -->
+    </switches>
+    <buttons names="Shot,Jump,Start,Coin,Pause" default="A,B,Start,Select,R" count="2"/>
+</misterromdescription>
