@@ -1,0 +1,28 @@
+<misterromdescription>
+	<name>Altair II</name>
+	<setname>altair2</setname>
+	<year>1981</year>
+	<manufacturer>Cidelsa</manufacturer>
+	<category>Shooter</category>
+	<rbf>Cidelsa</rbf>
+	<buttons default="A,B,Start,Select" names="Fire,Fire2,-,-,-,-,Start,Coin,P2 Start,-"></buttons>
+
+	<switches default="FF" base="8">
+		<dip name="Difficulty" bits="0,1" ids="Very Hard,Hard,Easy,Very Easy"/>
+		<dip name="Bonus Life" bits="2,3" ids="14000,10000,7000,5000"/>
+		<dip name="Lives"      bits="4,5" ids="4,3,2,1"/>
+		<dip name="Coinage"    bits="6,7" ids="A2.5/B5,A2/B4,A1.5/B3,A1/B2"/>
+	</switches>
+
+	<rom index="0" zip="altair2.zip" md5="none">
+		<part name="alta2-2716.ic7"  crc="e82833ab"/>
+		<part name="altb2-2716.ic8"  crc="92df504a"/>
+		<part name="altc2-2716.ic9"  crc="a4e33775"/>
+		<part name="altd2-2716.ic10" crc="79b56041"/>
+		<part name="alte2-2716.ic11" crc="be7fdb42"/>
+		<part name="altf2-2716.ic12" crc="cf74b50f"/>
+	</rom>
+	<rom index="1">
+		<part>1</part>
+	</rom>
+</misterromdescription>
